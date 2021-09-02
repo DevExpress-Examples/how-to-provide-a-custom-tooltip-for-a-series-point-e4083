@@ -1,5 +1,5 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolTipPointTemplate", "ToolTipPointTemplate\ToolTipPointTemplate.csproj", "{9C9D372E-A3EE-4F44-8E6C-1B975EA0D675}"
 EndProject
 Global
