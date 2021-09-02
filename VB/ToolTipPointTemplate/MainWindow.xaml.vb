@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Collections.Generic
 Imports System.Windows
 Imports System.Windows.Documents
@@ -12,6 +11,7 @@ Namespace ToolTipPointTemplate
 
 	Partial Public Class MainWindow
 		Inherits Window
+
 		Public Sub New()
 			InitializeComponent()
 			chart.DataSource = GetDataSource()
@@ -44,8 +44,10 @@ Namespace ToolTipPointTemplate
 			Return result
    End Function
 		Public NotInheritable Class DataLoader
+
 			Private Sub New()
 			End Sub
+
 			Public Shared Function LoadXmlFromResources(ByVal fileName As String) As XDocument
 				Try
 					fileName = "/ToolTipPointTemplate;component" & fileName
@@ -97,9 +99,9 @@ Namespace ToolTipPointTemplate
 		End Property
 
 		Public Sub New(ByVal country As String, ByVal year As Integer, ByVal product As Decimal)
-			Country = country
-			Year = year
-			Product = product
+			Me.Country = country
+			Me.Year = year
+			Me.Product = product
 		End Sub
 	End Class
 
@@ -122,15 +124,7 @@ Namespace ToolTipPointTemplate
 				privateCountryName = value
 			End Set
 		End Property
-		Private privateToolTipData As ToolTipData
 		Public Property ToolTipData() As ToolTipData
-			Get
-				Return privateToolTipData
-			End Get
-			Set(ByVal value As ToolTipData)
-				privateToolTipData = value
-			End Set
-		End Property
 
 		Public Sub New(ByVal GDPs As List(Of GDP))
 			ToolTipData = New ToolTipData(GDPs, GDPs(0).Country)
@@ -149,15 +143,7 @@ Namespace ToolTipPointTemplate
 				privateGDPs = value
 			End Set
 		End Property
-		Private privateSeriesBrush As SolidColorBrush
 		Public Property SeriesBrush() As SolidColorBrush
-			Get
-				Return privateSeriesBrush
-			End Get
-			Set(ByVal value As SolidColorBrush)
-				privateSeriesBrush = value
-			End Set
-		End Property
 		Private privateTitle As String
 		Public Property Title() As String
 			Get
@@ -169,7 +155,7 @@ Namespace ToolTipPointTemplate
 		End Property
 
 		Public Sub New(ByVal gdps As List(Of GDP), ByVal countryName As String)
-			GDPs = gdps
+			Me.GDPs = gdps
 			Title = countryName & " GDP History"
 		End Sub
 	End Class
