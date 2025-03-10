@@ -4,25 +4,19 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 [![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
+# Chart for WPF - How to Create a Custom Tooltip for a Series Point
 
+This example implements a custom tooltip that displays another chart with a GDP history for the selected country when hovering over a bar.
+
+![chart](./images/chart.png)
+
+## Implementation Details
+
+The `System.Windows.DataTemplate` object specifies the custom tooltip appearance. The object is assigned to the [Series.ToolTipPointTemplate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.Series.ToolTipPointTemplate) property. The `GetDataSource()` and `GetGDPs()` methods supply charts with data from the GDP datasource. 
+
+## Files to Review 
 * [MainWindow.xaml](./CS/ToolTipPointTemplate/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/ToolTipPointTemplate/MainWindow.xaml))
 * [MainWindow.xaml.cs](./CS/ToolTipPointTemplate/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/ToolTipPointTemplate/MainWindow.xaml.vb))
-<!-- default file list end -->
-# How to provide a custom tooltip for a series point
-
-
-<p>This example shows how to implement a custom tooltip that displays another chart with a GDP history for the selected country when hovering over a bar. </p><p>To accomplish this, it is necessary to create the<strong> System.Windows.DataTemplate </strong>object that specifies the custom tooltip appearance, and assign it to the <a href="http://help.devexpress.com/#WPF/DevExpressXpfChartsSeries_ToolTipPointTemplatetopic"><u>Series.ToolTipPointTemplate</u></a> property.  </p><p>You also need to bind both charts to the GDP datasource and write the GetDataSource() and GetGDPs() methods. These methods allow you to get the GDP data from a datasource  for each selected country to display it on a chart tooltip. </p>
-
-
-<h3>Description</h3>
-
-<p><br />
-</p>
-
-<br/>
-
 
 <!-- feedback -->
 ## Does this example address your development requirements/objectives?
